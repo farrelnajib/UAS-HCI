@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
+  <script src="https://kit.fontawesome.com/dc353b7b40.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/logo-only.svg" />
+
+  <title>Home - Mediccc</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <!-- End of navbar -->
+
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <img src="assets/img/landing.svg" alt="landing">
+        </div>
+        <div class="col-lg-6 order-lg-1 jumbotron-text">
+          <h1>MEDICAL SERVICES YOU CAN TRUST</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet quam illum deleniti excepturi
+            quos unde, tenetur, nulla, fuga voluptatem omnis pariatur veritatis natus possimus! Nostrum non facere
+            corporis quod.</p>
+          <a href="#" class="btn btn-secondary tombol">BOOK NOW &ThickSpace; <i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Jumbotron -->
+
+  <!-- Booking container -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="card hours">
+              <div class="card-header">
+                <h5>Opening Hours</h5>
+              </div>
+              <div class="card-body">
+                <table width="100%">
+                  <tr>
+                    <td>Monday - Thursday</td>
+                    <td class="kanan">09.00 - 18.00</td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td class="kanan">10.00 - 18.00</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td class="kanan">09.00 - 15.00</td>
+                  </tr>
+                  <tr>
+                    <td>Monday - Thursday</td>
+                    <td class="kanan"><strong>Closed</strong></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="card h-100 mb-0">
+              <div class="card-header">
+                <h5>Emergency</h5>
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-secondary btn-block tombol mb-2"><i class="fas fa-phone-alt"></i>
+                  &ThickSpace; +6281 123 2001</a>
+                <p class="mb-0 center">Jangan nelpon kecuali darurat oke? ;)</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card appointment">
+          <div class="card-header">
+            <h5>Make an appointment</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <form id="bookForm">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="specialist">Specialist</label>
+                        <select class="form-control" name="specialist" id="specialist">
+                          <option>Default select</option>
+                          <option>Default select</option>
+                          <option>Default select</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="doctor">Doctor</label>
+                        <select class="form-control" name="doctor" id="doctor">
+                          <option>Default select</option>
+                          <option>Default select</option>
+                          <option>Default select</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="purpose">Purpose</label>
+                        <select class="form-control" name="purpose" id="purpose">
+                          <option>Default select</option>
+                          <option>Default select</option>
+                          <option>Default select</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy">
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="complaints">Complaints</label>
+                        <textarea class="form-control" name="complaints" id="complaints" rows="4"
+                          placeholder="Contoh: pusing, demam, dll."></textarea>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="time">Time</label>
+                        <select class="form-control" name="time" id="time">
+                          <option>Default select</option>
+                          <option>Default select</option>
+                          <option>Default select</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <button class="btn btn-primary btn-block">Make appointment!</button>
+              </div>
+              <div class="col-lg-4">
+                <img src="assets/img/reservation.png" alt="appointment">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="booking"></div>
+  <!-- End of booking container -->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue mt-5">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      © 2020 Copyright: Mediccc by Farrel Anshary
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- End of footer -->
+
+  <!-- Login modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" onkeyup="validateInput(this);">
+              <div class="invalid-feedback">Invalid or blank email</div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" id="password" onkeyup="validateInput(this);">
+              <div class="invalid-feedback">Blank password</div>
+            </div>
+          </form>
+          <button type="button" class="btn btn-primary btn-block" id="loginButton">Login</button>
+          <div class="center">
+            <span>Don't have account yet? <a href="register.html">Register here</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of login modal -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-notify.min.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/page/index.js"></script>
+</body>
+
+</html>

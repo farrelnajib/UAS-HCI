@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Navigation */
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 25px;
+}
+
+.aktif {
+  color: #1ebde7;
+}
+
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item .nav-link:active,
+.navbar-light .nav-item .nav-link:focus,
+.navbar-light .nav-item:hover .nav-link {
+  color: #1ebde7;
+}
+
+/* Jumbotron */
+.jumbotron {
+  margin-bottom: 0;
+  min-height: calc(100% - 76px);
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+}
+
+.jumbotron h1 {
+  font-weight: 800;
+  font-size: 36px;
+  background: -webkit-linear-gradient(#1ebde7, #8ad0dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 25px;
+}
+
+.jumbotron p {
+  margin-bottom: 25px;
+}
+
+.btn-secondary {
+  background-color: #b9c25f;
+  border-color: #b9c25f;
+}
+
+.jumbotron .jumbotron-text {
+  text-align: center;
+}
+
+.jumbotron img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 75%;
+}
+
+/* Modal */
+#loginModal .modal-body span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}
+
+.login-brand {
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #666;
+  text-align: center;
+}
+
+.login-brand img {
+  background-color: white;
+}
+
+/* Register */
+.tab {
+  display: none;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.finish {
+  background-color: #1ebde7;
+  opacity: 1;
+}
+
+/* Booking hours */
+.hours .kanan {
+  text-align: right;
+}
+
+.hours table td {
+  padding: 10px 0;
+}
+
+/* Appointment */
+.appointment img {
+  width: 100%;
+  display: none;
+}
+
+/* Footer */
+footer.blue {
+  background-color: #1ebde7;
+  color: white;
+}
+
+/* Utility */
+.tombol {
+  border-radius: 50vh;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.btn-primary {
+  background-color: #1ebde7;
+  border-color: #8ad0dc;
+}
+
+.btn-primary:hover {
+  background-color: #7ca8c6;
+  border-color: #8ad0dc;
+}
+
+.btn-primary:focus {
+  background-color: #8ad0dc;
+  border-color: #8ad0dc;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn-primary:disabled {
+  background-color: #1ebde7;
+  border-color: #8ad0dc;
+  cursor: not-allowed;
+}
+
+/* .form-control {
+    border-radius: 50vh;
+} */
+
+.shadow-light {
+  box-shadow: 0 2px 6px #e6ecf1;
+}
+
+.background-light {
+  background-color: #f7f4f2;
+}
+
+.card {
+  border-color: #1ebde7;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .jumbotron h1 {
+    font-size: 42px;
+  }
+
+  .jumbotron .jumbotron-text {
+    text-align: left;
+  }
+
+  .jumbotron img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .appointment img {
+    display: block;
+  }
+}
