@@ -15,10 +15,9 @@ let currentStep = 0;
 showTab(currentStep);
 validate(currentStep);
 
-$(window).ready(() => {
-    console.log('done');
-    $(".pre-loader-icon").fadeOut("slow");;
-});
+window.onload = function () {
+    $(".pre-loader-icon").fadeOut("slow");
+}
 
 function showTab(n) {
     let tab = $('.tab');

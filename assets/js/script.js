@@ -3,6 +3,10 @@
 let email = false;
 let password = false;
 
+window.onload = function () {
+    $(".pre-loader-icon").fadeOut("slow");
+}
+
 function validate() {
     if (email && password) {
         document.getElementById('loginButton').removeAttribute('disabled');
@@ -66,7 +70,6 @@ $('#navbar').on('click', '#loginModalButton', () => {
 $('#navbar').ready(() => {
     $.get('partials/navbar.html', (data) => {
         $('#navbar').html(data);
-        $(".pre-loader-icon").fadeOut("slow");
         addActive();
         checkLogin();
     });
