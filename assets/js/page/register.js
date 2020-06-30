@@ -41,7 +41,9 @@ function submit() {
     });
 
     sessionStorage.setItem('user', JSON.stringify(storedData));
-    window.location = '../../../index.html';
+    swal("Success", "Successfully registered", 'success').then(() => {
+        window.location = '../../../index.html';
+    });
 }
 
 function next(n) {

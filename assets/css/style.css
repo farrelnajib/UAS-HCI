@@ -125,6 +125,11 @@ body {
   opacity: 1;
 }
 
+/* Booking general */
+#booking {
+  min-height: calc(100vh - 56px);
+}
+
 /* Booking hours */
 .hours .kanan {
   text-align: right;

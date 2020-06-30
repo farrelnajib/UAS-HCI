@@ -50,7 +50,7 @@ function validateInput(element) {
     validate();
 }
 
-$(document).ready(() => {
+$('#navbar').ready(() => {
     $.get('partials/navbar.html', (data) => {
         $('#navbar').html(data);
         $('#home').parent().addClass('active');
@@ -83,12 +83,7 @@ $('#loginButton').click(() => {
 
     if (users.email == inputEmail) {
         if (users.password == inputPassword) {
-            swal({
-                title: 'Success!',
-                message: 'Successfully logged in',
-                icon: 'success',
-                button: 'Proceed'
-            }).then(() => {
+            swal("Success", "Successfully logged in!", 'success').then(() => {
                 $('#loginModal').modal('hide');
             });
         } else {
