@@ -105,9 +105,6 @@
                       <div class="form-group">
                         <label for="specialist">Specialist</label>
                         <select class="form-control" name="specialist" id="specialist">
-                          <option>Default select</option>
-                          <option>Default select</option>
-                          <option>Default select</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -117,9 +114,7 @@
                       <div class="form-group">
                         <label for="doctor">Doctor</label>
                         <select class="form-control" name="doctor" id="doctor">
-                          <option>Default select</option>
-                          <option>Default select</option>
-                          <option>Default select</option>
+                          <option disabled selected>Choose specialist first</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -129,9 +124,9 @@
                       <div class="form-group">
                         <label for="purpose">Purpose</label>
                         <select class="form-control" name="purpose" id="purpose">
-                          <option>Default select</option>
-                          <option>Default select</option>
-                          <option>Default select</option>
+                          <option>Checkup</option>
+                          <option>Consultation</option>
+                          <option>Other</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -158,9 +153,16 @@
                       <div class="form-group">
                         <label for="time">Time</label>
                         <select class="form-control" name="time" id="time">
-                          <option>Default select</option>
-                          <option>Default select</option>
-                          <option>Default select</option>
+                          <option selected disabled>Choose time</option>
+                          <option>09.00</option>
+                          <option>10.00</option>
+                          <option>11.00</option>
+                          <option>12.00</option>
+                          <option>13.00</option>
+                          <option>14.00</option>
+                          <option>15.00</option>
+                          <option>16.00</option>
+                          <option>17.00</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -168,7 +170,7 @@
                   </div>
                 </form>
 
-                <button class="btn btn-primary btn-block">Make appointment!</button>
+                <button class="btn btn-primary btn-block" id="bookButton">Make appointment!</button>
               </div>
               <div class="col-lg-4">
                 <img src="assets/img/reservation.png" alt="appointment">

@@ -1,0 +1,30 @@
+{
+    "umum": {
+        "nama": "Poli Umum",
+        "dokter": [
+            "Dr. KevinA",
+            "Dr. MalvinK"
+        ]
+    },
+    "kebidanan": {
+        "nama": "Poli Kebidanan",
+        "dokter": [
+            "Dr. Reta",
+            "Dr. Vaness"
+        ]
+    },
+    "gigi": {
+        "nama": "Poli Gigi",
+        "dokter": [
+            "Drg. Farrel",
+            "Drg. Emon"
+        ]
+    },
+    "fisioterapi": {
+        "nama": "Poli Fisioterapi",
+        "dokter": [
+            "Dr. Culphin",
+            "Dr. Joy"
+        ]
+    }
+}
