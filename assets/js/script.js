@@ -52,11 +52,6 @@ function validateInput(element) {
     validate();
 }
 
-$(window).ready(() => {
-    console.log('done');
-    $(".pre-loader-icon").fadeOut("slow");;
-});
-
 $('#navbar').on('click', '#loginModalButton', () => {
     $('#email').val('');
     $('#password').val('');
@@ -71,8 +66,8 @@ $('#navbar').on('click', '#loginModalButton', () => {
 $('#navbar').ready(() => {
     $.get('partials/navbar.html', (data) => {
         $('#navbar').html(data);
+        $(".pre-loader-icon").fadeOut("slow");
         addActive();
-
         checkLogin();
     });
 });
