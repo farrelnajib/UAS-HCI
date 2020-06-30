@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;800;900&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Open sans", sans-serif;
 }
 
 /* Navigation */
@@ -151,6 +151,48 @@ footer.blue {
   color: white;
 }
 
+/* Queue */
+.full-height {
+  min-height: calc(100vh - 76px - 56px);
+}
+
+.queue .card {
+  margin-bottom: 30px;
+  border-radius: 42px;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  box-shadow: 4px 4px 10px rgba(124, 168, 198, 0.5);
+}
+
+.your-queue {
+  margin-top: 20px;
+  border: 0 !important;
+  background-color: #B9C25F;
+  box-shadow: 4px 4px 10px rgba(185, 194, 95, 0.5) !important;
+}
+
+.status {
+  font-weight: 700;
+  font-size: 24px;
+  color: #7CA8C6;
+}
+
+.angka {
+  font-weight: 700;
+  font-size: 72px;
+  color: #B9C25F;
+}
+
+.your-queue .status,
+.your-queue .angka {
+  color: white;
+}
+
+.in-handling {
+  border: 5px solid #1ebde7 !important;
+}
+
 /* Utility */
 .tombol {
   border-radius: 50vh;
@@ -198,7 +240,7 @@ footer.blue {
 }
 
 .card {
-  border-color: #1ebde7;
+  border: 1px solid #1ebde7;
 }
 
 /* Responsive */
@@ -218,5 +260,9 @@ footer.blue {
 
   .appointment img {
     display: block;
+  }
+
+  .your-queue {
+    margin-top: 0;
   }
 }
