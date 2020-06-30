@@ -18,6 +18,9 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div class="pre-loader-icon"></div>
+  <!-- End of preloader -->
   <!-- Navbar -->
   <div id="navbar"></div>
   <!-- End of navbar -->
@@ -34,7 +37,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eveniet quam illum deleniti excepturi
             quos unde, tenetur, nulla, fuga voluptatem omnis pariatur veritatis natus possimus! Nostrum non facere
             corporis quod.</p>
-          <a href="#booking" class="btn btn-secondary tombol">BOOK NOW &ThickSpace; <i
+          <a href="index.html#booking" class="btn btn-secondary tombol">BOOK NOW &ThickSpace; <i
               class="fa fa-chevron-right"></i></a>
         </div>
       </div>
@@ -92,7 +95,7 @@
         </div>
       </div>
       <div class="col-lg-8">
-        <div class="card appointment">
+        <div class="card appointment mb-3">
           <div class="card-header">
             <h5>Make an appointment</h5>
           </div>
@@ -104,7 +107,7 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="specialist">Specialist</label>
-                        <select class="form-control" name="specialist" id="specialist">
+                        <select class="form-control" name="specialist" id="specialist" onchange="checkBooking(this)">
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -113,7 +116,7 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="doctor">Doctor</label>
-                        <select class="form-control" name="doctor" id="doctor">
+                        <select class="form-control" name="doctor" id="doctor" onchange="checkBooking(this)">
                           <option disabled selected>Choose specialist first</option>
                         </select>
                         <div class="invalid-feedback"></div>
@@ -123,10 +126,11 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="purpose">Purpose</label>
-                        <select class="form-control" name="purpose" id="purpose">
-                          <option>Checkup</option>
-                          <option>Consultation</option>
-                          <option>Other</option>
+                        <select class="form-control" name="purpose" id="purpose" onchange="checkBooking(this)">
+                          <option selected disabled>Choose purpose</option>
+                          <option value="1">Checkup</option>
+                          <option value="2">Consultation</option>
+                          <option value="3">Other</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -135,7 +139,8 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="date">Date</label>
-                        <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy">
+                        <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy"
+                          onchange="checkBooking(this)">
                         <div class="invalid-feedback"></div>
                       </div>
                     </div>
@@ -144,7 +149,7 @@
                       <div class="form-group">
                         <label for="complaints">Complaints</label>
                         <textarea class="form-control" name="complaints" id="complaints" rows="4"
-                          placeholder="Contoh: pusing, demam, dll."></textarea>
+                          placeholder="Contoh: pusing, demam, dll." onkeyup="checkBooking(this)"></textarea>
                         <div class="invalid-feedback"></div>
                       </div>
                     </div>
@@ -152,17 +157,17 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="time">Time</label>
-                        <select class="form-control" name="time" id="time">
+                        <select class="form-control" name="time" id="time" onchange="checkBooking(this)">
                           <option selected disabled>Choose time</option>
-                          <option>09.00</option>
-                          <option>10.00</option>
-                          <option>11.00</option>
-                          <option>12.00</option>
-                          <option>13.00</option>
-                          <option>14.00</option>
-                          <option>15.00</option>
-                          <option>16.00</option>
-                          <option>17.00</option>
+                          <option value="9">09.00</option>
+                          <option value="10">10.00</option>
+                          <option value="11">11.00</option>
+                          <option value="12">12.00</option>
+                          <option value="13">13.00</option>
+                          <option value="14">14.00</option>
+                          <option value="15">15.00</option>
+                          <option value="16">16.00</option>
+                          <option value="17">17.00</option>
                         </select>
                         <div class="invalid-feedback"></div>
                       </div>
@@ -173,7 +178,7 @@
                 <button class="btn btn-primary btn-block" id="bookButton">Make appointment!</button>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/reservation.png" alt="appointment">
+                <img src="assets/img/reservation.png" alt="appointment" style="bottom: 0;">
               </div>
             </div>
           </div>

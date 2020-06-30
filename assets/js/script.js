@@ -52,6 +52,22 @@ function validateInput(element) {
     validate();
 }
 
+$(window).ready(() => {
+    console.log('done');
+    $(".pre-loader-icon").fadeOut("slow");;
+});
+
+$('#navbar').on('click', '#loginModalButton', () => {
+    $('#email').val('');
+    $('#password').val('');
+
+    $('#email').removeClass('is-invalid');
+    $('#password').removeClass('is-invalid');
+
+    $('#email').removeClass('is-valid');
+    $('#password').removeClass('is-valid');
+});
+
 $('#navbar').ready(() => {
     $.get('partials/navbar.html', (data) => {
         $('#navbar').html(data);
@@ -68,18 +84,37 @@ $('#login').ready(() => {
 });
 
 function checkLogin() {
-    let loginData = localStorage.getItem('loggedInUser');
+    let loginData = sessionStorage.getItem('loggedInUser');
     if (loginData) {
-        $('#loginModalButton')
-            .html('Profile')
-            .removeAttr('data-toggle')
-            .removeAttr('data-target');
+        $('#nav-button').html(`
+        <div class="dropdown">
+            <button class="btn btn-primary tombol dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Profile
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+        `);
     } else {
-        $('#loginModalButton')
-            .html('Login')
-            .attr('data-toggle', 'modal')
-            .attr('data-target', '#loginModal');
+        $('#nav-button').html(`
+            <button class="btn btn-primary tombol" data-toggle="modal" data-target="#loginModal"
+            id="loginModalButton">Login</button>
+        `);
     }
+}
+
+function logout() {
+    sessionStorage.removeItem('loggedInUser');
+    $.notify({
+        title: 'Successfully logged out!',
+        message: ''
+    }, {
+        type: 'success'
+    });
+
+    checkLogin();
 }
 
 $('#login').on('click', '#loginButton', () => {
@@ -93,7 +128,7 @@ $('#login').on('click', '#loginButton', () => {
             if (users.password == inputPassword) {
                 swal("Success", "Successfully logged in!", 'success').then(() => {
                     $('#loginModal').modal('hide');
-                    localStorage.setItem('loggedInUser', users)
+                    sessionStorage.setItem('loggedInUser', JSON.stringify(users))
                     checkLogin();
                 });
             } else {

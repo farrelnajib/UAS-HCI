@@ -1,8 +1,46 @@
 let specialists,
-    doctors;
+    doctors,
+    bookingForm = {
+        specialist: false,
+        doctor: false,
+        purpose: false,
+        date: false,
+        complaints: false,
+        time: false,
+    };
 
 function addActive() {
     $('#home').parent().addClass('active');
+}
+
+function checkBooking(data) {
+    let name = data.getAttribute('name');
+    if (data.value) {
+        bookingForm[name] = true;
+    } else {
+        bookingForm[name] = false;
+    }
+
+    validateBooking();
+}
+
+function validateBooking() {
+    let valid = true;
+
+    for (let form in bookingForm) {
+        if (!bookingForm[form]) {
+            valid = false;
+            break;
+        }
+    }
+
+    if (valid) {
+        document.getElementById('bookButton').removeAttribute('disabled');
+        document.getElementById('bookButton').classList.remove('disabled');
+    } else {
+        document.getElementById('bookButton').setAttribute('disabled', true);
+        document.getElementById('bookButton').classList.add('disabled');
+    }
 }
 
 $(document).ready(() => {
@@ -14,6 +52,8 @@ $(document).ready(() => {
             $('#specialist').append('<option value="' + specialist + '">' + specialists[specialist]['nama'] + '</option>')
         }
     });
+
+    validateBooking();
 });
 
 $('#specialist').change(() => {
