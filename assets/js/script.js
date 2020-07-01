@@ -78,6 +78,7 @@ $('#navbar').ready(() => {
 $('#login').ready(() => {
     $.get('partials/modal.html', (data) => {
         $('#login').html(data);
+        validate();
     });
 });
 
