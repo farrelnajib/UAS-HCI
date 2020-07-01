@@ -7,9 +7,7 @@ $(document).ready(() => {
     if (appointment) {
         $('#no-booking-data').css('display', 'none');
         $('#patient-name').html(appointment.nama);
-        $.get('database/doctors.json', (data) => {
-            $('#specialist-doctor').html(data[appointment.specialist].nama + ' - ' + appointment.doctor);
-        });
+        $('#specialist-doctor').html(appointment.specialist + ' - ' + appointment.doctor);
 
         const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 

@@ -7,6 +7,36 @@ let specialists,
         date: false,
         complaints: false,
         time: false,
+    },
+    doctorsCollection = {
+        "umum": {
+            "nama": "Poli Umum",
+            "dokter": [
+                "Dr. KevinA",
+                "Dr. MalvinK"
+            ]
+        },
+        "kebidanan": {
+            "nama": "Poli Kebidanan",
+            "dokter": [
+                "Dr. Reta",
+                "Dr. Vaness"
+            ]
+        },
+        "gigi": {
+            "nama": "Poli Gigi",
+            "dokter": [
+                "Drg. Farrel",
+                "Drg. Emon"
+            ]
+        },
+        "fisioterapi": {
+            "nama": "Poli Fisioterapi",
+            "dokter": [
+                "Dr. Culphin",
+                "Dr. Joy"
+            ]
+        }
     };
 
 function addActive() {
@@ -44,14 +74,12 @@ function validateBooking() {
 }
 
 $(document).ready(() => {
-    specialists = $.get('database/doctors.json', (data) => {
-        specialists = data;
-        $('#specialist').append(`<option selected disabled>Choose specialist</option>`);
+    specialists = doctorsCollection;
+    $('#specialist').append(`<option selected disabled>Choose specialist</option>`);
 
-        for (let specialist in specialists) {
-            $('#specialist').append('<option value="' + specialist + '">' + specialists[specialist]['nama'] + '</option>')
-        }
-    });
+    for (let specialist in specialists) {
+        $('#specialist').append('<option value="' + specialist + '">' + specialists[specialist]['nama'] + '</option>')
+    }
 
     validateBooking();
 });
@@ -82,6 +110,8 @@ $('#bookButton').click(() => {
         formData.forEach(data => {
             storedData[data.name] = data.value;
         });
+        console.log(doctorsCollection[storedData['specialist']].nama);
+        storedData['specialist'] = doctorsCollection[storedData['specialist']].nama;
 
         sessionStorage.setItem('appointment', JSON.stringify(storedData));
         swal('Success', 'Successfully booked your appointment', 'success')

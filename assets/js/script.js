@@ -68,18 +68,12 @@ $('#navbar').on('click', '#loginModalButton', () => {
 });
 
 $('#navbar').ready(() => {
-    $.get('partials/navbar.html', (data) => {
-        $('#navbar').html(data);
-        addActive();
-        checkLogin();
-    });
+    addActive();
+    checkLogin();
 });
 
 $('#login').ready(() => {
-    $.get('partials/modal.html', (data) => {
-        $('#login').html(data);
-        validate();
-    });
+    validate();
 });
 
 function checkLogin() {
