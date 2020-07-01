@@ -45,7 +45,7 @@ function submit() {
     });
 
     sessionStorage.setItem('user', JSON.stringify(storedData));
-    swal("Success", "Successfully registered", 'success').then(() => {
+    swal("Success", "Successfully registered! Please proceed to login", 'success').then(() => {
         window.location = '././index.html';
     });
 }

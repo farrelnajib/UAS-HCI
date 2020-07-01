@@ -67,8 +67,26 @@ $('#specialist').change(() => {
 });
 
 $('#bookButton').click(() => {
-    swal('Success', 'Successfully booked your appointment', 'success')
-        .then(() => {
-            window.location = 'queue.html';
+    let loginData = JSON.parse(sessionStorage.getItem('loggedInUser'));
+    if (loginData == null) {
+        $.notify({
+            title: 'Please login first',
+            message: ''
+        }, {
+            type: 'danger'
         });
+    } else {
+        const formData = $('form#bookForm').serializeArray();
+        let storedData = {};
+        storedData['nama'] = loginData.nama
+        formData.forEach(data => {
+            storedData[data.name] = data.value;
+        });
+
+        sessionStorage.setItem('appointment', JSON.stringify(storedData));
+        swal('Success', 'Successfully booked your appointment', 'success')
+            .then(() => {
+                window.location = 'queue.html';
+            });
+    }
 });
