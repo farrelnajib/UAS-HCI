@@ -90,11 +90,14 @@ function checkLogin() {
             </div>
         </div>
         `);
+
+        $('#coverBooking').css('display', 'none');
     } else {
         $('#nav-button').html(`
             <button class="btn btn-primary tombol" data-toggle="modal" data-target="#loginModal"
             id="loginModalButton">Login</button>
         `);
+        $('#coverBooking').css('display', 'flex');
     }
 }
 

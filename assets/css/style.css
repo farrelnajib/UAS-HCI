@@ -129,6 +129,27 @@ body {
   min-height: calc(100vh - 56px);
 }
 
+.appointment .cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.appointment .cover .tulisan {
+  text-align: center;
+}
+
+
 /* Booking hours */
 .hours .kanan {
   text-align: right;

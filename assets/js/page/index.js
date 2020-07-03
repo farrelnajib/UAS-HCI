@@ -120,3 +120,14 @@ $('#bookButton').click(() => {
             });
     }
 });
+
+$('#loginBooking').click(() => {
+    $('#email').val('');
+    $('#password').val('');
+
+    $('#email').removeClass('is-invalid');
+    $('#password').removeClass('is-invalid');
+
+    $('#email').removeClass('is-valid');
+    $('#password').removeClass('is-valid');
+});
